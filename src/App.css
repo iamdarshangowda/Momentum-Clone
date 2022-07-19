@@ -34,10 +34,16 @@ body {
 
 /* CLOCK */
 
-.clock {
+.time-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 300px;
-  border: 1px solid red;
+  align-items: flex-end;
+  height: 350px;
+}
+
+.time {
+  font-family: "Oswald", sans-serif;
+  font-size: 10rem;
+  color: white;
+  text-shadow: 0 0 1px black;
 }
