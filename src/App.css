@@ -32,6 +32,14 @@ body {
   color: white;
 }
 
+.new-image {
+  position: absolute;
+  font-size: 16px;
+  left: 20px;
+  top: 550px;
+  cursor: pointer;
+}
+
 /* CLOCK */
 
 .time-container {

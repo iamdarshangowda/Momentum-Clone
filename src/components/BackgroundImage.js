@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { RiRestartFill } from "react-icons/ri";
 
 export default function BackgroundImage() {
   const [imageData, setImageData] = useState({
@@ -8,6 +9,7 @@ export default function BackgroundImage() {
     location: "",
   });
   const [isArtist, setIsArtist] = useState(false);
+  const [changeBackground, setChangeBackground] = useState(false);
 
   const sourceUrl = `https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature`;
 
@@ -24,7 +26,7 @@ export default function BackgroundImage() {
 
   useEffect(() => {
     getImage();
-  }, [isArtist]);
+  }, [changeBackground]);
 
   return (
     <div>
@@ -38,6 +40,11 @@ export default function BackgroundImage() {
       >
         {imageData.location}
       </p>
+      <RiRestartFill
+        className="new-image"
+        style={{ fontSize: 20, color: "#ffffff" }}
+        onClick={() => setChangeBackground((prev) => !prev)}
+      />
       {isArtist && <p className="image-artist">{imageData.artist}</p>}
     </div>
   );
