@@ -11,6 +11,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.App {
+  position: relative;
+  height: 60vh;
+}
 /* BACKGROUND IMAGE */
 
 .image-artist {
@@ -43,6 +47,7 @@ body {
 /* CLOCK */
 
 .time-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -54,4 +59,66 @@ body {
   font-size: 10rem;
   color: white;
   text-shadow: 0 0 1px black;
+}
+
+.clock-format {
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.btn-clock {
+  border: none;
+  margin: 1px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 10px;
+}
+
+/* QUOTE */
+
+.quote {
+  position: absolute;
+  color: white;
+  width: 600px;
+  left: 400px;
+  bottom: -260px;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+  font-size: 14px;
+}
+
+/* GREET */
+
+.greet-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  align-items: center;
+}
+
+.greet {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+.name-input {
+  font-family: "Montserrat", sans-serif;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid white;
+  background: none;
+  font-size: 30px;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name-input:focus {
+  outline: none;
 }
