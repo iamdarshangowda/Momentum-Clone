@@ -13,16 +13,13 @@ export default function UserGreet() {
     JSON.stringify(localStorage.setItem("name", name));
   };
 
-  const day = new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-
   useEffect(() => {
-    if (day.slice(-2) === "AM") {
+    const hrs = new Date().getHours();
+    if (hrs < 12) {
       setGreet("Good Morning");
-    } else if (day.slice(-2) === "PM") {
+    } else if (hrs >= 12 && hrs <= 17) {
+      setGreet("Good Afternoon");
+    } else if (hrs >= 17 && hrs <= 24) {
       setGreet("Good Evening");
     }
   }, []);

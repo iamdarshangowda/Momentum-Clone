@@ -14,14 +14,24 @@ export default function BackgroundImage() {
   const sourceUrl = `https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature`;
 
   const getImage = async () => {
-    const response = await fetch(sourceUrl);
-    const jsonData = await response.json();
-    setImageData((prev) => ({
-      ...prev,
-      imgUrl: jsonData.urls.full,
-      artist: jsonData.user.first_name + " " + jsonData.user.last_name,
-      location: jsonData.location.name,
-    }));
+    try {
+      const response = await fetch(sourceUrl);
+      const jsonData = await response.json();
+      setImageData((prev) => ({
+        ...prev,
+        imgUrl: jsonData.urls.full,
+        artist: jsonData.user.first_name + " " + jsonData.user.last_name,
+        location: jsonData.location.name,
+      }));
+    } catch (error) {
+      console.log(error);
+      setImageData((prev) => ({
+        ...prev,
+        imgUrl: process.env.PUBLIC_URL + "images/default_image.jpg",
+        artist: "Andreas Gücklhorn",
+        location: "Lake Brienz, Switzerland",
+      }));
+    }
   };
 
   useEffect(() => {
