@@ -13,7 +13,7 @@ body {
 
 .App {
   position: relative;
-  height: 60vh;
+  height: 55vh;
 }
 /* BACKGROUND IMAGE */
 
@@ -97,14 +97,13 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100px;
   align-items: center;
 }
 
 .greet {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 55px;
 }
 
 .name-input {
@@ -121,4 +120,8 @@ body {
 
 .name-input:focus {
   outline: none;
+}
+
+.username-edit {
+  display: inline;
 }

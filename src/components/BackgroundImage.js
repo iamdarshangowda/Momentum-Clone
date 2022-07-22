@@ -41,6 +41,7 @@ export default function BackgroundImage() {
         {imageData.location}
       </p>
       <RiRestartFill
+        title="change background"
         className="new-image"
         style={{ fontSize: 20, color: "#ffffff" }}
         onClick={() => setChangeBackground((prev) => !prev)}
