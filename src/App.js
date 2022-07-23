@@ -4,6 +4,7 @@ import BackgroundImage from "./components/BackgroundImage";
 import DigitalClock from "./components/DigitalClock";
 import Quotes from "./components/Quotes";
 import UserGreet from "./components/UserGreet";
+import Crypto from "./components/Crypto";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <DigitalClock />
       <UserGreet />
       <Quotes />
+      <Crypto />
     </div>
   );
 }

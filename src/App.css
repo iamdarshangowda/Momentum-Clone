@@ -125,3 +125,33 @@ body {
 .username-edit {
   display: inline;
 }
+
+/* CRYPTO */
+
+.crypto-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px;
+  color: white;
+}
+
+.crypto-container > h3 {
+  text-shadow: 1px -1px #d00000;
+  font-size: 14px;
+  color: #ffba08;
+  background-color: #52b69a;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.crypto-price-container {
+  background-color: #ffba08;
+  padding: 4px;
+  border-radius: 6px;
+  margin-top: 2px;
+  color: #52b69a;
+  text-shadow: 1px -1px #d9ed92;
+  font-weight: bold;
+  font-size: 12px;
+}
